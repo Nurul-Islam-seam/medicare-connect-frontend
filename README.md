@@ -1,55 +1,52 @@
-# MediCare Connect - Frontend Client
+# MediCare Connect - Patient & Doctor Portal
 
-The frontend client for the MediCare Connect hospital appointment & healthcare management system.
+![MediCare Connect](https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=1200&h=400)
 
-## Technologies Used
-- Next.js (App Router)
-- React & TypeScript
-- Tailwind CSS & DaisyUI
-- Framer Motion (Animations)
-- React Hot Toast (Notifications)
-- Recharts (Admin Analytics)
-- Stripe React (Payments)
-- Firebase (Google OAuth)
-- Zustand / Context API (State Management)
+## Overview
+MediCare Connect is a modern, responsive, and highly secure healthcare management platform. The frontend client provides a seamless experience for patients to find doctors, book appointments, and manage their medical records. For doctors, it offers a dedicated dashboard to manage schedules, review patient histories, and handle consultations efficiently.
 
-## Prerequisites
-- Node.js (v18+)
-- Firebase Project (for Google Auth)
-- Stripe Account (for payments)
+## Key Features
+- **User Authentication:** Secure JWT-based authentication for Patients, Doctors, and Admins.
+- **Doctor Discovery:** Advanced search and filtering capabilities to find specialists by expertise, rating, and fee.
+- **Appointment Booking:** Real-time appointment scheduling with automated status tracking.
+- **Responsive Design:** A beautiful, glassmorphism-inspired UI built with Tailwind CSS, fully responsive across mobile, tablet, and desktop devices.
+- **Interactive Dashboards:** Role-specific dashboards tailored for Patients and Doctors.
 
-## Environment Variables
-Create a `.env.local` file in the root of the client directory with the following variables:
-```env
-NEXT_PUBLIC_API_URL=http://localhost:5000/api
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
-NEXT_PUBLIC_FIREBASE_API_KEY=your_firebase_api_key
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_firebase_project_id
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
-NEXT_PUBLIC_FIREBASE_APP_ID=your_firebase_app_id
-```
+## Technology Stack
+- **Framework:** Next.js (React)
+- **Styling:** Tailwind CSS (with custom Glassmorphism utilities)
+- **Typography:** Google Fonts (Outfit)
+- **Icons:** React Icons
+- **Notifications:** React Hot Toast
+- **Animations:** Framer Motion
 
 ## Installation & Setup
-1. Clone the repository and navigate to the client folder:
+
+1. **Clone the repository**
    ```bash
-   cd client
+   git clone https://github.com/Nurul-Islam-seam/medicare-connect-frontend.git
+   cd medicare-connect-frontend
    ```
-2. Install dependencies:
+
+2. **Install dependencies**
    ```bash
    npm install
    ```
-3. Start the development server:
+
+3. **Configure Environment Variables**
+   Create a `.env.local` file in the root directory:
+   ```env
+   NEXT_PUBLIC_API_URL=https://medicare-connect-backend.onrender.com/api
+   ```
+
+4. **Run the development server**
    ```bash
    npm run dev
    ```
-4. The client will run on `http://localhost:3000`.
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Features Included
-- **Premium UI/UX**: Glassmorphism design system, dark/light theme toggle, fully responsive layout.
-- **Role-based Dashboards**: Unique views and features for Patients, Doctors, and Admins.
-- **Booking & Payments**: Seamless appointment booking flow with integrated Stripe checkout modal.
-- **Admin Analytics**: Interactive charts using Recharts for visualizing platform performance.
-- **Dynamic Content**: Server-side pagination, advanced filtering, and sorting for finding doctors.
-- **Micro-animations**: Enhanced interactivity with Framer Motion.
+## Deployment
+This project is configured for seamless deployment on **Vercel**. Simply connect the repository to Vercel and it will automatically build using `npm run build` and deploy.
+
+## License
+MIT License. See `LICENSE` for more information.
