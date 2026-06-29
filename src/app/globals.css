@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* ========================
+   MediCare Connect — Global Design System
+   ======================== */
+
+:root {
+    --color-primary: #10b981;
+    --color-primary-dark: #059669;
+    --color-secondary: #14b8a6;
+    --color-accent: #06d6a0;
+    --color-bg-dark: #0f172a;
+    --color-bg-card: #1e293b;
+    --color-text-primary: #f1f5f9;
+    --color-text-secondary: #94a3b8;
+    --color-border: rgba(255, 255, 255, 0.08);
+}
+
+/* ========================
+   Base Styles
+   ======================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-padding-top: 88px;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas {
+    max-width: 100%;
+}
+
+/* ========================
+   Glassmorphism Utilities
+   ======================== */
+.navbar-glass {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.card-glass {
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 0.5rem;
+}
+
+.card-glass:hover {
+    border-color: rgba(16, 185, 129, 0.2);
+    box-shadow: 0 8px 32px rgba(16, 185, 129, 0.08);
+}
+
+/* ========================
+   Gradient Text
+   ======================== */
+.gradient-text {
+    background: linear-gradient(135deg, #10b981, #14b8a6, #06d6a0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ========================
+   Primary Button
+   ======================== */
+.btn-primary {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    padding: 0.625rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.25);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #059669, #047857);
+    box-shadow: 0 6px 25px rgba(16, 185, 129, 0.4);
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    color: #e2e8f0;
+    padding: 0.625rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ========================
+   Form Inputs
+   ======================== */
+.input-field {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    color: #f1f5f9;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.input-field:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.input-field::placeholder {
+    color: #64748b;
+}
+
+/* ========================
+   Section Styles
+   ======================== */
+.section-title {
+    font-size: clamp(1.875rem, 4vw, 2.75rem);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0;
+    overflow-wrap: anywhere;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.page-shell {
+    width: min(100% - 2rem, 80rem);
+    margin-inline: auto;
+}
+
+.text-balance-safe {
+    text-wrap: balance;
+    overflow-wrap: anywhere;
+}
+
+.card-glass.overflow-x-auto {
+    max-width: 100%;
+}
+
+.card-glass.overflow-x-auto table {
+    min-width: 44rem;
+}
+
+/* ========================
+   Scrollbar
+   ======================== */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(100, 116, 139, 0.5);
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(100, 116, 139, 0.8);
+}
+
+/* ========================
+   Loading Spinner
+   ======================== */
+.spinner {
+    width: 48px;
+    height: 48px;
+    border: 4px solid rgba(16, 185, 129, 0.15);
+    border-top-color: #10b981;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ========================
+   Stat Counter Animation
+   ======================== */
+@keyframes countUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-count {
+    animation: countUp 0.6s ease-out forwards;
+}
+
+/* ========================
+   Dashboard Sidebar
+   ======================== */
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #94a3b8;
+    transition: all 0.2s ease;
+}
+
+.sidebar-link:hover {
+    color: #f1f5f9;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-link.active {
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+/* ========================
+   Light Theme Override
+   ======================== */
+[data-theme="light"] body {
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+[data-theme="light"] .navbar-glass {
+    background: rgba(248, 250, 252, 0.85);
+    border-color: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .card-glass {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .card-glass:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .input-field {
+    background: rgba(0, 0, 0, 0.02);
+    border-color: rgba(0, 0, 0, 0.1);
+    color: #1e293b;
+}
+
+[data-theme="light"] .sidebar-link {
+    color: #64748b;
+}
+
+[data-theme="light"] .sidebar-link:hover {
+    color: #1e293b;
+    background: rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] footer {
+    background-color: #1e293b;
+}
