@@ -35,10 +35,10 @@ const Navbar = () => {
             <div className="page-shell">
                 <div className="flex min-h-16 items-center justify-between gap-3 py-3 lg:min-h-20">
                     <Link href="/" onClick={closeMenus} className="group flex min-w-0 items-center gap-2">
-                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 shadow-lg shadow-emerald-500/20 transition-shadow group-hover:shadow-emerald-500/40">
-                            <FaHeartbeat className="text-xl text-white" />
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 shadow-lg shadow-emerald-500/20 transition-shadow group-hover:shadow-emerald-500/40">
+                            <FaHeartbeat className="text-base text-white" />
                         </span>
-                        <span className="truncate text-lg font-bold text-white sm:text-xl">
+                        <span className="truncate text-base font-bold text-white sm:text-lg">
                             MediCare<span className="hidden sm:inline"> Connect</span>
                         </span>
                     </Link>

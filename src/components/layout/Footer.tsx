@@ -35,10 +35,10 @@ const Footer = () => {
                     {/* Brand */}
                     <div className="lg:col-span-1">
                         <Link href="/" className="mb-4 flex min-w-0 items-center gap-2">
-                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600">
-                                <FaHeartbeat className="text-white text-xl" />
+                            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600">
+                                <FaHeartbeat className="text-white text-base" />
                             </div>
-                            <span className="text-balance-safe text-xl font-bold text-white">
+                            <span className="text-balance-safe text-lg font-bold text-white">
                                 MediCare Connect
                             </span>
                         </Link>

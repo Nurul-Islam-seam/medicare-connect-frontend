@@ -51,11 +51,39 @@ export default function LoginPage() {
                 <div className="card-glass p-8 sm:p-10">
                     {/* Header */}
                     <div className="text-center mb-8">
-                        <div className="w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center mb-4 shadow-lg shadow-emerald-500/20">
-                            <FaHeartbeat className="text-white text-2xl" />
+                        <div className="w-12 h-12 mx-auto rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center mb-4 shadow-lg shadow-emerald-500/20">
+                            <FaHeartbeat className="text-white text-xl" />
                         </div>
-                        <h1 className="text-2xl font-bold text-white">Welcome Back</h1>
-                        <p className="text-sm text-slate-400 mt-1">Sign in to your MediCare account</p>
+                        <h1 className="text-3xl font-bold text-white mb-2">Welcome Back</h1>
+                        <p className="text-sm text-slate-400">Sign in to your MediCare account</p>
+                    </div>
+
+                    {/* Quick Login Helpers */}
+                    <div className="mb-8 p-4 rounded-xl bg-slate-800/50 border border-slate-700/50">
+                        <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3 text-center">Test Accounts</p>
+                        <div className="grid grid-cols-3 gap-2">
+                            <button
+                                type="button"
+                                onClick={() => { setEmail('admin@medicare.com'); setPassword('Admin@123'); }}
+                                className="px-2 py-2 rounded-lg bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 text-xs font-medium transition-colors border border-emerald-500/20"
+                            >
+                                Admin
+                            </button>
+                            <button
+                                type="button"
+                                onClick={() => { setEmail('amanda@doctor.com'); setPassword('Doctor@123'); }}
+                                className="px-2 py-2 rounded-lg bg-blue-500/10 text-blue-400 hover:bg-blue-500/20 text-xs font-medium transition-colors border border-blue-500/20"
+                            >
+                                Doctor
+                            </button>
+                            <button
+                                type="button"
+                                onClick={() => { setEmail('sarah@patient.com'); setPassword('Patient@123'); }}
+                                className="px-2 py-2 rounded-lg bg-purple-500/10 text-purple-400 hover:bg-purple-500/20 text-xs font-medium transition-colors border border-purple-500/20"
+                            >
+                                Patient
+                            </button>
+                        </div>
                     </div>
 
                     {/* Google Login */}
@@ -77,7 +105,7 @@ export default function LoginPage() {
                     </div>
 
                     {/* Form */}
-                    <form onSubmit={handleSubmit} className="space-y-4">
+                    <form onSubmit={handleSubmit} className="space-y-5">
                         <div>
                             <label className="block text-sm font-medium text-slate-300 mb-1.5">Email</label>
                             <input
