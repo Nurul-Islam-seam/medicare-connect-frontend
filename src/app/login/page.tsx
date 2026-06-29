@@ -61,25 +61,25 @@ export default function LoginPage() {
                     {/* Quick Login Helpers */}
                     <div className="mb-8 p-4 rounded-xl bg-slate-800/50 border border-slate-700/50">
                         <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3 text-center">Test Accounts</p>
-                        <div className="grid grid-cols-3 gap-2">
+                        <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
                             <button
                                 type="button"
                                 onClick={() => { setEmail('admin@medicare.com'); setPassword('Admin@123'); }}
-                                className="px-2 py-2 rounded-lg bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 text-xs font-medium transition-colors border border-emerald-500/20"
+                                className="flex-1 sm:flex-none px-3 py-2.5 rounded-lg bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 text-sm font-medium transition-colors border border-emerald-500/20"
                             >
                                 Admin
                             </button>
                             <button
                                 type="button"
                                 onClick={() => { setEmail('amanda@doctor.com'); setPassword('Doctor@123'); }}
-                                className="px-2 py-2 rounded-lg bg-blue-500/10 text-blue-400 hover:bg-blue-500/20 text-xs font-medium transition-colors border border-blue-500/20"
+                                className="flex-1 sm:flex-none px-3 py-2.5 rounded-lg bg-blue-500/10 text-blue-400 hover:bg-blue-500/20 text-sm font-medium transition-colors border border-blue-500/20"
                             >
                                 Doctor
                             </button>
                             <button
                                 type="button"
                                 onClick={() => { setEmail('sarah@patient.com'); setPassword('Patient@123'); }}
-                                className="px-2 py-2 rounded-lg bg-purple-500/10 text-purple-400 hover:bg-purple-500/20 text-xs font-medium transition-colors border border-purple-500/20"
+                                className="flex-1 sm:flex-none px-3 py-2.5 rounded-lg bg-purple-500/10 text-purple-400 hover:bg-purple-500/20 text-sm font-medium transition-colors border border-purple-500/20"
                             >
                                 Patient
                             </button>

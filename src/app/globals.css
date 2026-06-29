@@ -146,6 +146,12 @@ canvas {
     color: #64748b;
 }
 
+/* Fix for select options being white-on-white */
+select.input-field option {
+    background-color: #1e293b;
+    color: #f1f5f9;
+}
+
 /* ========================
    Section Styles
    ======================== */
